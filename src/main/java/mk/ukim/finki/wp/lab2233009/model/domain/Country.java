@@ -1,0 +1,27 @@
+package mk.ukim.finki.wp.lab2233009.model.domain;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@Table(name = "countries")
+public class Country extends BaseEntity {
+
+    @Column(nullable = false, unique = true)
+    private String name;
+
+    @Column(nullable = false, unique = true)
+    private String continent;
+
+    public Country(String name, String continent) {
+        this.name = name;
+        this.continent = continent;
+    }
+}
