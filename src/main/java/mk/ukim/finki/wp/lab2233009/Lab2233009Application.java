@@ -9,10 +9,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
 @EnableScheduling
-public class TravelAppApplication {
+public class Lab2233009Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(TravelAppApplication.class, args);
+        SpringApplication.run(Lab2233009Application.class, args);
     }
     @Bean
     PasswordEncoder passwordEncoder() {
