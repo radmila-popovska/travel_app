@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+  namespace: travel-app
+data:
+  DB_HOST: "db"
+  DB_PORT: "5432"
+  DB_NAME: "accommodation-db"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: backend-secret
+  namespace: travel-app
+type: Opaque
+stringData:
+  DB_USER: "postgres"
+  DB_PASSWORD: "1234"
+  JWT_SECRET: "dd8e78a046d9e875d07ad57a11573f82756b46b66e511a0fecc799dffcc2fbbd"
